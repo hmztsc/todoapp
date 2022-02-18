@@ -1,5 +1,5 @@
 ## About
-Creates todo list web app with PHP Laravel 8/9.
+Todo App with PHP Laravel 8/9.
 Includes `Login Auth`, `AJAX with jQuery at Transactions`, `Seeders`
 
 ## Installation
