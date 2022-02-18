@@ -1,0 +1,51 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+@import 'variables';
+@import 'dashboard';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+html,
+body {
+   height: 100%;
+}
+
+body {
+   &.sign-in {
+      display: flex;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      text-align: center;
+   }
+}
+
+.form-signin {
+   width: 100%;
+   max-width: 330px;
+   padding: 15px;
+   margin: auto;
+}
+
+#todolist {
+   .list-group-item {
+      &:hover .transactions {
+         opacity: 1;
+         visibility: visible;
+      }
+      .transactions {
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         padding: 10px;
+         opacity: 0;
+         visibility: hidden;
+      }
+   }
+}
+
+.modal-alert .modal-dialog {
+   width: 380px;
+}
