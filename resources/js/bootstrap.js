@@ -2,6 +2,7 @@ window._ = require('lodash');
 
 try {
    bootstrap = require('bootstrap');
+   require('bootstrap/js/dist/alert');
 } catch (e) {}
 
 /**

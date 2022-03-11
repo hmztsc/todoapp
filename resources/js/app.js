@@ -1,12 +1,6 @@
 window.$ = window.jQuery = require('jquery');
 require('./bootstrap');
-window.moment = require('moment-timezone');
-moment.tz.setDefault("Europe/Istanbul");
-
 require('./scripts');
-require('./todolist/create');
-require('./todolist/read');
-require('./todolist/delete');
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {

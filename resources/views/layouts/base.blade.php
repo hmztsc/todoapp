@@ -36,38 +36,54 @@
          </div>
       </a>
       <div class='d-flex px-3'>
+
+         Department : {{ Auth::User()->department_id }}
          <div class="dropdown">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+               data-bs-toggle="dropdown" aria-expanded="false">
                <i class="bi bi-person"></i> {{ Auth::User()->name }}
             </a>
-            
+
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-               <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="bi bi-door-closed"></i>
-                  Sign out</a></li>
-               </ul>
-            </div>
-            <button class="navbar-toggler ms-2 d-md-none collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-             </button>
+               <li><a class="dropdown-item" href="{{ route('logout') }}"
+                     onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i
+                        class="bi bi-door-closed"></i>
+                     Sign out</a></li>
+            </ul>
+         </div>
+         <button class="navbar-toggler ms-2 d-md-none collapsed " type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
       </div>
-      
+
    </header>
    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">@csrf </form>
 
    <div class="container-fluid">
 
-      
+
       <div class="row">
          <nav id="sidebarMenu" class="col-md-3 col-lg-2 pt-0 pt-lg-5 d-md-block bg-light sidebar collapse">
             <div class="position-sticky pt-lg-5">
 
                @include('layouts.partials.navbar')
-               
-               
+
+
             </div>
          </nav>
 
          <main class="col-md-9 ms-sm-auto col-lg-10 py-md-3 px-md-5">
+
+            @if(session('status'))
+            <div class="alert alert-success d-flex align-items-center fade show" role="alert">
+               <i class="bi bi-check fs-2 lh-sm"></i>
+
+               <span>{{ session('status') }}</span>
+               <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            @endif
 
             @yield('content')
 

@@ -15,14 +15,15 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         if($this->command->confirm('Do you want to refresh the database ?',true)){
-            $this->command->call('migrate:refresh');
+            $this->command->call('migrate:fresh');
             $this->command->info('Database was refreshed.');
         }
 
         $seeders = [
+            'DepartmentSeeder' => Departmentseeder::class,
             'UsersTableSeeder' => UsersTableSeeder::class,
-            'TodoListTableSeeder' => TodoListTableSeeder::class,
-            // 'CommentsTableSeeder' => CommentsTableSeeder::class,
+            'TasksTableSeeder' => TasksTableSeeder::class,
+            'CommentsTableSeeder' => CommentsTableSeeder::class,
         ];
 
         if($this->command->confirm('Do you want to seed them all ?',true)){

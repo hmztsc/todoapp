@@ -14,9 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->boolean('is_superadmin')->default(false);
-            $table->boolean('is_admin')->default(false);
-            $table->boolean('is_agent')->default(false);
+            $table->unsignedBigInteger('department_id')->nullable();
+            $table->foreign('department_id')->references('id')->on('departments');
         });
     }
 
@@ -28,9 +27,8 @@ return new class extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('is_superadmin');
-            $table->dropColumn('is_admin');
-            $table->dropColumn('is_agent');
+            $table->dropForeign(['department_id']);
+            $table->dropColumn('department_id');
         });
     }
 };
