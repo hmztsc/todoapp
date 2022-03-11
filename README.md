@@ -1,6 +1,5 @@
 ## About
 Todo App with PHP Laravel 8/9.
-Includes `Login Auth`, `AJAX with jQuery at Transactions`, `Seeders`
 
 ## Installation
 - composer update
@@ -13,26 +12,34 @@ Includes `Login Auth`, `AJAX with jQuery at Transactions`, `Seeders`
 - php artisan serve
 
 ## Roles
-- Not done yet
+- Super Admin
+- Admin
+- User
  
 ## Crud
 - Creating the task.
 - Reading the task.
+- Updating the task.
 - Deleting the task.
 
-## Demo User
+## Demo Users
 Example user information that comes with the seeder
-- email: admin@webtures.com
-- password: password
+
+- SuperAdmin
+email: superadmin@webtures.com
+password: password
+
+- Admin
+email: admin@webtures.com
+password: password
+
+- User
+email: user@webtures.com
+password: password
 
 ## Coming Soon
 
-#### Task
-- Editing Task.
-- Creating task comments.
-
 #### Departments System
-- Creating the department by super admin.
 - Creating user by admin.
 - Assigning admin user to department by super admin.
 
