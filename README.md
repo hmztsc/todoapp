@@ -26,14 +26,17 @@ Todo App with PHP Laravel 8/9.
 Example user information that comes with the seeder
 
 - SuperAdmin
+
 email: superadmin@webtures.com
 password: password
 
 - Admin
+
 email: admin@webtures.com
 password: password
 
 - User
+
 email: user@webtures.com
 password: password
 
