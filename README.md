@@ -27,18 +27,18 @@ Example user information that comes with the seeder
 
 - SuperAdmin
 
-email: superadmin@webtures.com
-password: password
+   - email: superadmin@webtures.com
+   - password: password
 
 - Admin
 
-email: admin@webtures.com
-password: password
+   - email: admin@webtures.com
+   - password: password
 
 - User
 
-email: user@webtures.com
-password: password
+   - email: user@webtures.com
+   - password: password
 
 ## Coming Soon
 
